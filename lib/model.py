@@ -2056,7 +2056,8 @@ class MaskRCNN():
 
         # Add multi-GPU support.
         if config.GPU_COUNT > 1:
-            from lib.parallel_model import ParallelModel
+            #from lib.parallel_model import ParallelModel
+            from Deepfashion2_Training.lib.parallel_model import ParallelModel
             model = ParallelModel(model, config.GPU_COUNT)
 
         return model
